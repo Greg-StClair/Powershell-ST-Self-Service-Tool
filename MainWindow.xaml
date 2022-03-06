@@ -1,0 +1,74 @@
+﻿<Window x:Name="window_Main" x:Class="MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IT_Info_App_v._01"
+        mc:Ignorable="d"
+        Title="Sound Transit IT Tools" Height="361" Width="800
+        " SizeToContent="WidthAndHeight" ResizeMode="NoResize" WindowStyle="SingleBorderWindow" WindowStartupLocation="CenterScreen" Background="White" BorderBrush="White">
+    <Grid Margin="10,0,10,-16" Height="356">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="17*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="340.04"/>
+        </Grid.RowDefinitions>
+        <Rectangle HorizontalAlignment="Left" Height="25" Margin="423,37,0,0" Stroke="#FF2B376E" VerticalAlignment="Top" Width="80" RadiusY="10" RadiusX="10" Fill="#FF2B376E"/>
+        <Button x:Name="btn_RefreshInfo" Content="Refresh Info" HorizontalAlignment="Left" Margin="22,230,0,0" VerticalAlignment="Top" Width="130" Height="40" FontSize="20" Opacity="0" Panel.ZIndex="99"/>
+        <Button x:Name="btn_serviceDeskPhone" Content="206.398.5444" HorizontalAlignment="Left" Margin="423,37,0,0" VerticalAlignment="Top" FontSize="11" Width="80" Height="25" Cursor="Arrow" Panel.ZIndex="99" ToolTip="Copy to clipboard" BorderBrush="#00707070" Background="#00DDDDDD" Foreground="White"/>
+        <Label x:Name="label_compName" Content="Computer Name:" HorizontalAlignment="Left" Margin="168,253,0,0" VerticalAlignment="Top" FontSize="16" Width="133" Height="31"/>
+        <Label x:Name="label_LoggedInUser" Content="Logged in User:" HorizontalAlignment="Left" Margin="178,296,0,0" VerticalAlignment="Top" FontSize="16" Width="160" Height="36"/>
+        <Label x:Name="label_SDPhoneNumber" Content="Service Desk Phone:" HorizontalAlignment="Left" Margin="318,37,0,0" VerticalAlignment="Top" FontSize="11" Width="132" Height="25"/>
+        <Label x:Name="label_vpnStatus" Content="VPN Status:" HorizontalAlignment="Left" Margin="207,275,0,0" VerticalAlignment="Top" FontSize="16" Width="96" Height="31"/>
+        <TextBlock x:Name="txt_outputBlock" HorizontalAlignment="Left" Height="157" Margin="26,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="490" Text=" Welcome! Please select an option below. &#x0a; &#x0a; Click IT tools to see more options. The Clear cache &#x0a; and Cookies option can resolve many browser or &#x0a; website related issues.  " FontSize="20"/>
+        <Border x:Name="border_outputbox" BorderThickness="2" BorderBrush="#FFA7ABAE" HorizontalAlignment="Left" Height="157" Margin="10,60,0,0" VerticalAlignment="Top" Width="492" CornerRadius="10" Panel.ZIndex="1" Grid.ColumnSpan="1" Grid.Column="0"/>
+        <Button x:Name="btn_mainITtools" Content="IT Tools" HorizontalAlignment="Left" Margin="21,286,0,0" VerticalAlignment="Top" Width="131" Height="40" FontSize="20" Opacity="0" Panel.ZIndex="1"/>
+        <Image x:Name="image_stLogoHorizontal" HorizontalAlignment="Left" Height="64" Margin="10,7,0,0" VerticalAlignment="Top" Width="316" Source="C:\Program Files\SoundTransit IT Tools\web-st-logo-horizontal-blue-rgb.png"/>
+        <Rectangle HorizontalAlignment="Left" Height="40" Margin="22,230,0,0" Stroke="#FF2B376E" VerticalAlignment="Top" Width="130" RadiusY="10" RadiusX="10" Fill="#FF2B376E" Grid.Row="0"/>
+
+        <TextBlock HorizontalAlignment="Left" Height="25" Margin="30,237,0,0" Text="Refresh Info" TextWrapping="Wrap" VerticalAlignment="Top" Width="115" FontSize="20" FontWeight="Bold" Cursor="AppStarting" Foreground="#FFECECEC"/>
+        <Rectangle HorizontalAlignment="Left" Height="40" Margin="22,286,0,0" Stroke="#FF2B376E" VerticalAlignment="Top" Width="130" RadiusY="10" RadiusX="10" Fill="#FF2B376E"/>
+        <TextBlock HorizontalAlignment="Left" Height="25" Margin="50,292,0,0" Text="IT Tools" TextWrapping="Wrap" VerticalAlignment="Top" Width="74" FontSize="20" FontWeight="Bold" Cursor="AppStarting" Foreground="#FFECECEC"/>
+        <GroupBox Header="Computer Information" Margin="157,217,17,-1" BorderThickness="2" BorderBrush="#FFA7ABAE" FontSize="16" Grid.ColumnSpan="1" Grid.Column="0">
+            <Rectangle Height="73" Stroke="Black" Margin="139,0,7,0" RadiusX="10" RadiusY="10" Fill="#FF2B376E" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform Y="3"/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+        </GroupBox>
+        <Button x:Name="txt_compName" Margin="308,258,60,60" Foreground="White" FontSize="16" Background="#00DDDDDD" BorderBrush="#00707070" Grid.ColumnSpan="1" ToolTip="Copy to clipboard" HorizontalContentAlignment="Left"/>
+        <Button x:Name="txt_vpnStatus" Margin="308,280,41,38" Foreground="White" FontSize="16" Background="#00DDDDDD" BorderBrush="#00707070" Grid.ColumnSpan="1" ToolTip="Copy to clipboard" HorizontalContentAlignment="Left"/>
+        <Button x:Name="txt_userName" Margin="308,301,41,8" Foreground="White" FontSize="16" Background="#00DDDDDD" BorderBrush="#00707070" Grid.ColumnSpan="1" ToolTip="Copy to clipboard" HorizontalContentAlignment="Left"/>
+        <TextBlock x:Name="txt_loading" Margin="437,258,6,59" Foreground="White" FontSize="10" Grid.ColumnSpan="1"/>
+        <Label x:Name="label_NetworkInfo" Content="Network Information:" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="16" Width="175" Height="36" Grid.Column="1" FontWeight="Bold"/>
+
+        <Label x:Name="label_Network1" Content="Network Info 1:" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" FontSize="14" Width="118" Height="30" Grid.Column="1" FontWeight="Bold"/>
+        <Button x:Name="btn_Network1" Content="IPv4-1" Margin="127,50,10,260" Width="118" Height="30" Foreground="Black" Background="#00DDDDDD" BorderBrush="#00707070" ToolTip="Copy to clipboard" Grid.Column="1" HorizontalContentAlignment="Left"/>
+
+        <Label x:Name="label_Network2" Content="Network Info 2:" HorizontalAlignment="Left" Margin="10,85,0,0" VerticalAlignment="Top" FontSize="14" Width="118" Height="30" Grid.Column="1" FontWeight="Bold"/>
+        <Button x:Name="btn_Network2" Content="IPv4-2" Margin="127,85,10,225" Width="118" Height="30" Foreground="Black" Background="#00DDDDDD" BorderBrush="#00707070" ToolTip="Copy to clipboard" Grid.Column="1" HorizontalContentAlignment="Left"/>
+
+        <Label x:Name="label_Network3" Content="Network Info 3:" HorizontalAlignment="Left" Margin="10,120,0,0" VerticalAlignment="Top" FontSize="14" Width="118" Height="30" Grid.Column="1" FontWeight="Bold"/>
+        <Button x:Name="btn_Network3" Content="IPv4-3" Margin="127,120,10,190" Width="118" Height="30" Foreground="Black" Background="#00DDDDDD" BorderBrush="#00707070" ToolTip="Copy to clipboard" Grid.Column="1" HorizontalContentAlignment="Left"/>
+        
+        <Label x:Name="label_Network4" Content="Network Info 4:" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" FontSize="14" Width="118" Height="30" Grid.Column="1" FontWeight="Bold"/>
+        <Button x:Name="btn_Network4" Content="IPv4-4" Margin="127,155,10,155" Width="118" Height="30" Foreground="Black" Background="#00DDDDDD" BorderBrush="#00707070" ToolTip="Copy to clipboard" Grid.Column="1" HorizontalContentAlignment="Left"/>
+
+        <Label x:Name="label_Network5" Content="Network Info 5:" HorizontalAlignment="Left" Margin="10,190,0,0" VerticalAlignment="Top" FontSize="14" Width="118" Height="30" Grid.Column="1" FontWeight="Bold"/>
+        <Button x:Name="btn_Network5" Content="IPv4-5" Margin="128,190,9,120" Width="118" Height="30" Foreground="Black" Background="#00DDDDDD" BorderBrush="#00707070" ToolTip="Copy to clipboard" Grid.Column="1" HorizontalContentAlignment="Left"/>
+        
+        <GroupBox Header="Notice:" Margin="10,217,10,-1" BorderThickness="2" BorderBrush="#FFA7ABAE" FontSize="16" Grid.ColumnSpan="1" Grid.Column="1"/>
+        <TextBlock x:Name="txt_NetworkNotice" HorizontalAlignment="Center" Height="87" Margin="0,243,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="212" Text=" No errors! &#x0a; You can click any information on &#x0a; screen to copy it to the clipboard." FontSize="14" Grid.Column="1"/>
+
+
+
+
+    </Grid>
+</Window>
