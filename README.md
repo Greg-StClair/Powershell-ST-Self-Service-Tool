@@ -1,2 +1,3 @@
 # Powershell-ST-Self-Service-Tool
-IT Infrastructure tool built on .Net WPF for UI and powershell functionality - Windows
+- Powershell 5.1
+- IT Infrastructure tool for Windows built on .Net WPF and Powershell - Copyright Sound Transit 2022 - Authored by Gregory S St. Clair
